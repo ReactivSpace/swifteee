@@ -1,0 +1,78 @@
+<ion-view view-title='<div class="custom-head"><a >March 2016</a><i class="icon ion-chevron-down"></i><a href="#/app/listview">List View</a><div>'  class="shiftsView">
+  <ion-nav-back-button style="color: black;">
+  </ion-nav-back-button>
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+
+<!-- ....................... Calender ..................... -->
+<br>
+
+<p><flex-calendar options="options" events="events"></flex-calendar></p>
+
+<!-- ....................... Calender ..................... -->
+
+<div class="jobs" ng-repeat="shift in (shifts | filter:filterByGrade | filter:filterBySpeciality)">
+<div class="card">
+  <div class="row">
+   <div class="col col-80">
+  <a ng-click="shiftStatus(shift.$id)" ng-href='' class="item item-text-wrap">
+  <p><strong>{{shift.grade}}</strong> <span class="slected-text">{{shift.shift_dept}}</span></p>
+  <p class="time"><span class="icon ion-clock"></span> {{shift.startTime}} - {{shift.endTime}}  <span class="icon ion-clock hosp">Bredford Hospital</p>
+  </a>
+  </div>
+   <div class="col col-20 leftside">
+    <p>€{{shift.ratePH}}ph</p>
+   </div>
+  </div>
+</div>
+</div>
+
+<!-- <div class="jobs" >
+<div class="card">
+  <div class="row">
+   <div class="col col-80">
+
+  <a ui-sref="app.approved" class="item item-text-wrap">
+  <p><strong>SHO</strong> <span class="slected-text">Accident and  Emergency</span></p>
+  <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bredford Hospital</p>
+
+  </a>
+  </div>
+   <div class="col col-20 leftside">
+    <p>$45ph</p>
+
+   </div>
+
+  </div>
+
+</div>
+</div> -->
+
+
+
+
+</ion-content>
+</ion-view>
+
+
+
+<!-- .......................custom style...................... -->
+<style type="text/css">
+
+.bar-dark.bar.bar-header {
+    background: transparent none repeat scroll 0 0 !important;
+    border: medium none !important;
+}
+
+.bar-dark .button.button-icon {
+    border-color: transparent;
+    color: #8a8a8a;
+}
+.custom-head > a {
+    color: #eb878f !important;
+}
+
+.custom-head > i {
+    color: #eb878f !important;
+}
+
+</style>

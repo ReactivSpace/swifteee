@@ -1,0 +1,43 @@
+<ion-view view-title="Shifts Detail" class="shiftsView sdetai">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+
+<div class="jobs">
+<div class="card">
+  <div class="item item-divider">
+    <strong>{{date}}</strong>
+  </div>
+  <div class="row">
+  <div class="col">
+
+    <a class="item item-text-wrap">
+      <p><strong>{{speciality}}</strong> - {{grade}}</p>
+      <p class="time">{{startTime}} - {{endTime}}</p>
+      <p class="hour">Prior experience required</p>
+    </a>
+
+  </div>
+
+  </div>
+
+
+   <div class="row">
+  <div class="col col-75">
+
+    <a class="item item-text-wrap">
+      <p class="hour"><strong>€{{ratePH}} / hour</strong></p>
+      <p class="cancel-instru">Click cancel if you are unable to cover this shift</p>
+    </a>
+
+  </div>
+  <div class="col col-25">
+     <a id="dis" ng-click="apply()" class="button button-primery button_class">Apply</a>
+     <a id="dis" ui-sref="app.chat" class="button button-primery button_class">Discuss</a>
+  </div>
+
+  </div>
+
+</div>
+</div>
+
+</ion-content>
+</ion-view>

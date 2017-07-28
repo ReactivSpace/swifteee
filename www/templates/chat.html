@@ -1,0 +1,55 @@
+<style type="text/css">
+.button.button-icon.button-clear.ion-funnel {
+    display: none;
+}
+
+</style>
+<ion-view view-title="Chat" class="myjobs">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+
+    <ol class="chat">
+      <div ng-repeat="msg in messages">
+        <li ng-class="{ 'self': msg.user === 1, 'other' : msg.user === 0}">
+            <div class="msg">
+              <p>{{msg.message}}</p>
+              <time>{{msg.datetime | date:'HH:mm a'}}</time>
+            </div>
+        </li>
+      </div>
+    <!-- <li class="other">
+        <div class="avatar"><img src="img/default_male.jpg" draggable="false"/></div>
+      <div class="msg">
+        <p>Hey there's a new update about this chat UI with more responsive elements! Check it now:</p>
+
+        <time>18:09</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Hey there's a new update about this chat UI with more responsive elements! Check it now:</p>
+
+        <time>18:09</time>
+      </div>
+    </li> -->
+    </ol>
+    <div class="msgarea">
+
+    </div>
+
+</ion-content>
+ <div class="bar bar-footer bar-clear" style="position: fixed; background-color: #f1f1f1">
+
+       <label class="item item-input">
+           <i class="icon ion-happy-outline" ></i>
+           <input class="textarea" ng-model='chat.message' type="text" placeholder="Type a message" />
+           <i class="icon "></i>
+           <button class="button button-icon icon ion-ios-camera" style="background-color: rgb(235, 135, 143);"></button>
+       </label>
+
+     <button class="button button-icon icon ion-android-microphone button-positive" style="background-color: rgb(235, 135, 143);
+  margin-left: 481px;"></button>
+  <!--<button class="button button-icon icon ion-android-send footer-btn" ng-click='sendChat(chat)' type="submit">-->
+  <!--</button>-->
+ </div>
+</ion-view>

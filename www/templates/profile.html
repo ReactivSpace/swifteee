@@ -1,0 +1,239 @@
+<!-- /*<style type="text/css">
+.button.button-icon.button-clear.ion-funnel {
+    display: none;
+}
+
+</style>
+
+<ion-view view-title="My Profile" class="profile">
+  <ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+    <br>
+    <br>
+    <br>
+
+  <div class="profile-info">
+
+  <img src="data:image/jpeg;base64,{{picture}}">
+  <div class="profile-info-desc">
+  <h2>{{first_name}} {{last_name}}</h2>
+
+  <div class="mid-info">
+  <p>{{current_emp}}{{current_emp}}{{current_emp}}</p>
+  <i class="icon ion-edit" ng-click='upload()'></i>
+
+  </div>
+  </div>
+  <div class="info-part">
+<div class="row">
+  <div class="col">
+    <a ui-sref="app.editprofile" class="card">
+  <div class="item item-text-wrap">
+    <h1>My Details</h1>
+
+  </div>
+  </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <a ui-sref="app.mydocs" class="card">
+  <div class="item item-text-wrap">
+    <h1>My Documents</h1>
+    Upload Your Documents To Get Approved
+  </div>
+  </a>
+  </div>
+</div>
+
+
+</div>
+</div>
+<div class="profile-experiance">
+  <p class="padding exp">Experience</p>
+  <a ui-sref="app.editexperiance" class="card row">
+  <div class="col">
+     <h1>Therapist</h1>
+     <p>{{current_emp}}</p>
+     <p>{{emp_startD | date : "MMMM y"}} - {{emp_endD | date : "MMMM y"}}</p>
+  </div>
+</a>
+</div>
+
+
+
+</ion-content>
+</ion-view>
+
+<style type="text/css">
+.bar-dark.bar.bar-header {
+    box-shadow: none;
+}
+</style>*/ -->
+<style type="text/css">
+.button.button-icon.button-clear.ion-funnel {
+    display: none;
+}
+
+</style>
+
+<ion-view view-title="My Profile" class="profile">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true" ng-controller="ProfileCtrl">
+
+<div class="profile-info">
+
+
+<div class="profile-info-desc row">
+  <div class="mid-info col">
+<h2>{{ name }}</h2>
+<div class="image"><img id="pp" src="data:image/jpeg;base64,{{picture}}"><a ng-click="upload()" class="btn icon ion-ios-plus picbutton"></a></div>
+
+<h4><strong>SHO</strong> Bredford Hospital</h4>
+
+</div>
+</div>
+
+<!-- Navigation -->
+<nav>
+ <a  ng-click='showOne()' class="active" > Profile </a>
+ <a  ng-click='showTwo()' > Documents </a>
+</nav>
+
+
+<div class="row protabs" >
+<div class="col">
+<div class="list settingView" ng-show="one" >
+
+  <a class="item item-icon-right " ng-click="detailshow()" >
+   <p>Personal Details</p>
+    <i class="icon ion-chevron-down"></i>
+  </a>
+
+  <div ng-show="PersonalDetail" class="PersonalDetail info">
+    <div class="row">
+    <div class="col col-33"> <span class="input-label">Name</span></div>
+    <div class="col col-63"><p>Dr. John Doe</p></div>
+    </div>
+
+    <div class="row">
+    <div class="col col-33"> <span class="input-label">Email</span></div>
+    <div class="col col-63"><p>johndoe@yahoo.com</p></div>
+    </div>
+
+    <div class="row">
+    <div class="col col-33"> <span class="input-label">GMC</span></div>
+    <div class="col col-63"><p>1234567</p></div>
+    </div>
+
+    <div class="row">
+    <div class="col col-33"> <span class="input-label">Mobile</span></div>
+    <div class="col col-63"><p>+1234567890</p></div>
+    </div>
+
+    <div class="row text-right">
+    <div class="col"> <button style="background: none !important;" class="button">Save</button></div>
+    </div>
+  </div>
+
+  <a class="item  item-icon-right" ng-click="experienceshow()">
+   <p>Experience</p>
+    <i class="icon ion-chevron-down"></i>
+  </a>
+
+  <div ng-show="experience" class="PersonalDetail docs">
+    <div class="row">
+    <div class="col col-25"> <span class="input-label">Current</span></div>
+    <div class="col col-50">
+      <p>SHO</p>
+      <p>Bredford Hospital</p>
+      <p>Current</p>
+    </div>
+    <div class="col col-25 text-center"> <i class="icon ion-ios-compose-outline"></i></div>
+    </div>
+
+    <div class="row">
+    <div class="col col-25"> <span class="input-label">Past</span></div>
+    <div class="col col-50">
+      <p>SHO</p>
+      <p>Bredford Hospital</p>
+      <p>Current</p>
+    </div>
+    <div class="col col-25 text-center"> <i class="icon ion-ios-compose-outline"></i></div>
+    </div>
+
+
+    <div class="row">
+    <div class="col col-25"> <span class="input-label">Past</span></div>
+    <div class="col col-50">
+      <p>TMO</p>
+      <p>SZMC Hospital</p>
+      <p>2010-2012</p>
+    </div>
+    <div class="col col-25 text-center"> <i class="icon ion-ios-compose-outline"></i></div>
+    </div>
+    <button class="button btn-float"><i class="icon ion-plus"></i></button>
+  </div>
+
+</div>
+</div>
+</div>
+
+<div class="row protabs">
+<div class="col">
+<div class="list settingView" ng-show="two" >
+
+  <a class="item  item-icon-right" ng-click="documentsshow()">
+   <p>Add Documents</p>
+    <i class="icon ion-chevron-down"></i>
+  </a>
+
+  <div class="row adddoc PersonalDetail" ng-show="documents">
+    <div class="col">
+    <div class="row">
+    <div class="col text-left "> <i style="font-size: 35px !important; " class="icon ion-upload upload"></i></div>
+    <div class="col col-60"><p class="doc">Completion of Training Certificate</p></div>
+    <div class="col col-20 text-center"> <i class="icon ion-checkmark-round plus"></i><i class="icon ion-plus-round circle" ng-click="docs('app.ctc')"></i></div>
+    </div>
+
+    <div class="row">
+    <div class="col text-left "> <i style="font-size: 35px !important; " class="icon ion-upload upload"></i></div>
+    <div class="col col-60"><p class="doc">Criminal Records Bureaue Check</p></div>
+    <div class="col col-20 text-center"> <i class="icon ion-checkmark-round plus"></i> <i class="icon ion-plus-round circle" ng-click="docs('app.crbc')"></i></div>
+    </div>
+
+    <div class="row">
+    <div class="col text-left "> <i style="font-size: 35px !important; " class="icon ion-upload upload"></i></div>
+    <div class="col col-60"><p class="doc">Medical Indemnity</p></div>
+    <div class="col col-20 text-center"> <i class="icon ion-checkmark-round plus"></i> <i class="icon ion-plus-round circle" ng-click="docs('app.medical')"></i></div>
+    </div>
+
+    <div class="row">
+    <div class="col text-left "> <i style="font-size: 35px !important; " class="icon ion-upload upload"></i></div>
+    <div class="col col-60"><p class="doc">Passport</p></div>
+    <div class="col col-20 text-center"> <i class="icon ion-checkmark-round plus"></i> <i class="icon ion-plus-round circle" ng-click="docs('app.passport')"></i></div>
+    </div>
+
+    <div class="row">
+    <div class="col text-left "> <i style="font-size: 35px !important; " class="icon ion-upload upload"></i></div>
+    <div class="col col-60"><p class="doc">CV</p></div>
+    <div class="col col-20 text-center"> <i class="icon ion-checkmark-round plus"></i> <i class="icon ion-plus-round circle" ng-click="docs('app.cv')"></i></div>
+    </div>
+
+    <div class="row">
+    <div class="col text-left "> <i style="font-size: 35px !important; " class="icon ion-upload upload"></i></div>
+    <div class="col col-60"><p class="doc">CRB/DBS</p></div>
+    <div class="col col-20 text-center"> <i class="icon ion-checkmark-round plus"></i> <i class="icon ion-plus-round circle" ng-click="docs('app.CRB')"></i></div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</ion-content>
+</ion-view>
+<style type="text/css">
+.bar-dark.bar.bar-header {
+    background: #3D464D !important;
+    border: medium none !important;
+}
+</style>

@@ -1,0 +1,22 @@
+<ion-view view-title="My Jobs" class="myjobs">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+<br>
+
+<div class="upcoming">
+  <p ng-click="openfilterModal()">Upcoming</p>
+</div>
+<div class="jobs" ng-repeat="shift in shifts | filter:showMovie">
+  <div class="card">
+    <div class="item item-divider">
+    <strong>{{shift.date}}</strong>
+    </div>
+    <a ng-click="assigned(shift.$id)" ng-href='' class="item item-text-wrap">
+    <p><strong>{{shift.speciality}}</strong> - {{shift.grade}}<i class="icon ion-checkmark-round yellow"></i></p>
+    <p class="time">{{shift.startTime}} - {{shift.endTime}}</p>
+    <p class="hour">€{{shift.ratePH}} / hour</p>
+    </a>
+  </div>
+</div>
+
+</ion-content>
+</ion-view>

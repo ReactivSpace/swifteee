@@ -1,0 +1,54 @@
+<ion-view view-title="My Jobs" class="myjobs">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+<br>
+
+<div class="upcoming">
+   <p ng-click='go_back()'>< Back</p>
+</div>
+<div class="jobs">
+<div class="card">
+  <div class="item item-divider">
+    {{date}}
+  </div>
+  <div class="row">
+  <div class="col col-80">
+    <a ui-sref="app.job-detail" class="item item-text-wrap">
+      <p><strong>{{speciality}}</strong> - {{grade}}</p>
+      <p class="time">{{startTime}} - {{endTime}}</p>
+      <p class="hour">No prior experience required.</p>
+    </a>
+
+  </div>
+  <div class="col col-20 confirmed">
+      <i class="icon ion-checkmark-round con-blue"></i>
+      <p>Confirmed</p>
+  </div>
+
+  </div>
+
+
+   <div class="row">
+  <div class="col col-75">
+
+    <a ui-sref="app.job-detail" class="item item-text-wrap">
+      <p class="hour"><strong>€{{ratePH}} / hour</strong></p>
+      <p class="cancel-instru">Click cancel if you are unable to cover this shift</p>
+    </a>
+
+  </div>
+  <div class="col col-25 confirmed">
+     <button class="button button-assertive" ng-click="cancelShift()">Cancel</button>
+     <button class="button button-assertive" ui-sref="app.chat">Discuss</button>
+     <!-- <a id="dis" ui-sref="app.chat" class="button button-primery button_class">Discuss</a> -->
+  </div>
+
+  </div>
+
+</div>
+</div>
+
+
+
+
+</ion-content>
+</ion-view>

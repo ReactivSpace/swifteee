@@ -1,0 +1,114 @@
+<ion-view view-title="Add Experience" class="editprofile experiance"  hide-nav-bar="true">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+<div class="signup-header">
+   <div class="row">
+    <div class="col-10"><a ui-sref="app.profile">X</a></div>
+    <div class="col-75">Add Experience</div>
+    <div class="col-15"><a ui-sref="app.profile">Done</a></div>
+   </div>
+  </div>
+
+<div>
+
+
+<div class="editcontent">
+<div class="row">
+  <div class="col">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="exp.company" placeholder="Company">
+      </label>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="exp.grade" placeholder="Title">
+      </label>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="exp.location" placeholder="Location">
+      </label>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="row">
+  <div class="col col-50">
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="date" ng-model="exp.startD">
+      </label>
+    </div>
+  </div>
+  <div class="col col-50">
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="date" ng-model="exp.endD">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-66">
+
+    <div class="list list-inset">
+      <p >I currently work here </p>
+    </div>
+  </div>
+  <div class="col col-33 text-right">
+<label class="toggle">
+   <input type="checkbox">
+   <div class="track">
+     <div class="handle"></div>
+   </div>
+</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <textarea ng-model="exp.description" placeholder="Description"></textarea>
+      </label>
+    </div>
+  </div>
+
+</div>
+
+<div class="row cancelexp padding">
+  <div class="col">
+   <button class="button button-full button-balanced" ng-click="addExperience(exp)">Save</button>
+
+  </div>
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</ion-content>
+</ion-view>

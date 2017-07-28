@@ -1,0 +1,57 @@
+
+<ion-view class="homeView" view-title="Home" hide-nav-bar="true">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+
+  <div class="login-head">
+    <div class="row">
+     <div class="col"><img src="img/logo.png"></div>
+    </div>
+  </div>
+ <div class="login">
+ <div class="list list-inset">
+  <label class="item item-input">
+    <input type="email" placeholder="Hospital Email" ng-model="users.email">
+  </label>
+  <label class="item item-input">
+    <input type="password" placeholder="Password" ng-model="users.password">
+  </label>
+  <div class="row links">
+
+
+
+
+      <div class="col col-50"><ion-checkbox >Remember me</ion-checkbox></div>
+      <div class="col col-50 text-right"><a ui-sref="app.forgetpassword">Forgot password?</a></div>
+
+    </div>
+  <button class="button button-full" ng-click="login(users)">Login</button>
+
+   <div class="login-footer">
+
+
+
+	  <div class="row">
+	   	<div class="col"><button  ui-sref="app.signup" class="button  button-positive">Sign up</button></div>
+	  </div>
+  </div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<!-- <div class="col col-center text-center">
+		<h1 class="animated bounceInDown" on-tap="HelloWorld()">Starter</h1>
+		<div id="container" class="animated bounceInLeft" on-tap="showUsers()"></div>
+<button class="button button-outline button-block button-light animated bounceInUp" ui-sref="app.gallery">Enter</button>
+
+</div> -->
+
+</ion-content>
+</ion-view>

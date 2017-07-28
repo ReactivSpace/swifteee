@@ -1,0 +1,124 @@
+
+<ion-view view-title='<div class="custom-head"><a >{{today | date : "MMMM y"}}</a><i class="icon ion-chevron-down"></i><a href="#/app/shifts">Calendar</a><div>'  class="shiftsView">
+
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+
+<div class="row jobsheader">
+<div class="col"><p>Tuesday, March 9</p></div>
+</div>
+<div class="jobs" ng-repeat="shift in (shifts | filter:filterByGrade | filter:filterBySpeciality)">
+<div class="card">
+  <div class="row">
+   <div class="col col-80">
+    <a ng-click="shiftStatus(shift.$id)" class="item item-text-wrap">
+    <p><strong>{{shift.grade}}</strong> <span class="slected-text">{{shift.shift_dept}}</span></p>
+    <p class="time"><span class="icon ion-clock"></span>{{shift.startTime}} - {{shift.endTime}}<span class="icon ion-clock hosp">Bredford Hospital</p>
+    </a>
+  </div>
+   <div class="col col-20 leftside">
+    <p>€{{shift.ratePH}}ph</p>
+   </div>
+  </div>
+</div>
+</div>
+
+
+<!-- <div class="jobs">
+<div class="card">
+  <div class="row">
+   <div class="col col-80">
+  <a ui-sref="app.approved" class="item item-text-wrap">
+  <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+  <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+  </div>
+   <div class="col col-20 leftside">
+    <p>$45ph</p>
+   </div>
+  </div>
+</div>
+</div>
+
+<div class="jobs">
+<div class="card">
+  <div class="row">
+   <div class="col col-80">
+  <a ui-sref="app.approved" class="item item-text-wrap">
+  <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+  <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+  </div>
+   <div class="col col-20 leftside">
+    <p>$45ph</p>
+   </div>
+  </div>
+</div>
+</div>
+
+<div class="row jobsheader">
+<div class="col"><p>Wednesday, March 10</p></div>
+
+</div>
+
+<div class="jobs">
+<div class="card">
+  <div class="row">
+   <div class="col col-80">
+  <a ui-sref="app.approved" class="item item-text-wrap">
+  <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+  <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+  </div>
+   <div class="col col-20 leftside">
+    <p>$45ph</p>
+   </div>
+  </div>
+</div>
+</div>
+
+<div class="jobs">
+<div class="card">
+  <div class="row">
+   <div class="col col-80">
+  <a ui-sref="app.approved" class="item item-text-wrap">
+  <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+  <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+  </div>
+   <div class="col col-20 leftside">
+    <p>$45ph</p>
+   </div>
+  </div>
+</div>
+</div>
+ -->
+
+
+
+
+</ion-content>
+</ion-view>
+
+
+
+<!-- .......................custom style...................... -->
+<style type="text/css">
+
+.bar-dark.bar.bar-header {
+    background: transparent none repeat scroll 0 0 !important;
+    border: medium none !important;
+}
+
+.bar-dark .button.button-icon {
+    border-color: transparent;
+    color: #8a8a8a;
+}
+.custom-head > a {
+    color: #eb878f !important;
+}
+
+.custom-head > i {
+    color: #eb878f !important;
+}
+.bar-dark .button.button-clear {
+
+    color: #8a8a8a;
+
+}
+</style>

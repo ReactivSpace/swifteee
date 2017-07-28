@@ -1,0 +1,24 @@
+<ion-modal-view class="bigModal" ng-controller='ShiftsCtrl'>
+
+<ion-content overflow-scroll="false"  has-bouncing="true">
+<p >
+  <p class="padding">Grade</p>
+<ion-list>
+  <ion-checkbox ng-model="filter2.FYI" ng-change="FYIFChange()">FYI</ion-checkbox>
+  <ion-checkbox ng-model="filter2.SHO" ng-change="SHOFChange()">SHO</ion-checkbox>
+  <ion-checkbox ng-model="filter2.Registrar" ng-change="RegistrarFChange()">Registrar</ion-checkbox>
+  <ion-checkbox ng-model="filter2.Consultant" ng-change="ConsultantFChange()">Consultant</ion-checkbox>
+
+</ion-list>
+<ion-list>
+  <p class="padding">Speciality</p>
+  <ion-checkbox ng-model="sfiltera.AE" ng-change="AEChange()">A&E</ion-checkbox>
+  <ion-checkbox ng-model="sfilter.AUU" ng-change="AUUChange()">AUU</ion-checkbox>
+  <ion-checkbox ng-model="sfilter.General_Medicine" ng-change="GMChange()">General Medicine</ion-checkbox>
+  <ion-checkbox ng-model="sfilter.General_Surgery" ng-change="GSChange()">General Surgery</ion-checkbox>
+  <ion-checkbox ng-model="sfilter.Therapist" ng-change="TherapistChange()">Therapist</ion-checkbox>
+</ion-list>
+</p>
+
+</ion-content>
+</ion-modal-view>

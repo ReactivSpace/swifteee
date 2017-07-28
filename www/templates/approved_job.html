@@ -1,0 +1,167 @@
+<!-- <ion-view view-title="My Jobs" class="myjobs">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+<br>
+
+<div class="upcoming">
+   <p ng-click='go_back()'>< Back</p>
+</div>
+<div class="jobs">
+<div class="card">
+  <div class="item item-divider">
+    {{date}}
+  </div>
+  <div class="row">
+  <div class="col col-80">
+    <a ui-sref="app.job-detail" class="item item-text-wrap">
+      <p><strong>{{speciality}}</strong> - {{grade}}</p>
+      <p class="time">{{startTime}} - {{endTime}}</p>
+      <p class="hour">Prior experience of required but not essential</p>
+    </a>
+  </div>
+  <div class="col col-20 confirmed">
+      <i class="icon ion-checkmark-round con-yellow"></i>
+      <p>awaiting approval</p>
+  </div>
+
+  </div>
+
+
+   <div class="row">
+  <div class="col col-75">
+
+    <a ui-sref="app.job-detail" class="item item-text-wrap">
+      <p class="hour"><strong>€{{ratePH}} / hour</strong></p>
+      <p class="cancel-instru">Click cancel if you are unable to cover this shift</p>
+    </a>
+
+  </div>
+  <div class="col col-25 confirmed">
+     <button ng-click="cancelShift()" class="button button-assertive">Cancel</button>
+     <button id="dis" ui-sref="app.chat" class="button button-assertive">Discuss</button>
+  </div>
+
+  </div>
+
+</div>
+</div>
+
+
+
+
+</ion-content>
+</ion-view> -->
+
+
+<ion-view view-title='<div class="jobapply text-center"><a href="">Apply</a><div>' class="myjobs jobs-detail">
+<ion-content  overflow-scroll="false" has-header="true" has-bouncing="true">
+<br>
+<div class="jobs">
+<div class="card card-background">
+  <div class="row">
+   <div class="col col-80">
+
+  <aclass="item item-text-wrap">
+  <p><strong>{{speciality}}</strong> <span class="slected-text">{{grade}}</span></p>
+  <p class="time"><span class="icon ion-clock"></span> {{startTime}} - {{endTime}} <span class="icon ion-clock hosp"> Bedford hospital</p>
+
+  </a>
+  </div>
+   <div class="col col-20 leftside">
+    <p>€{{ratePH}}ph</p>
+
+   </div>
+
+  </div></div>
+
+<div class="card card-background">
+  <div class="row">
+   <div class="col">
+
+  <a  class="item item-text-wrap">
+  <p><strong>Description</strong></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore</p>
+  </a>
+  </div>
+  </div></div>
+
+<div class="card">
+  <div class="row">
+    <div class="col list">
+        <label class="item item-input item-floating-label">
+    <span class="input-label">Date</span>
+    <input type="text" placeholder="Date">
+  </label>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col col-50 list">
+        <label class="item item-input item-floating-label">
+    <span class="input-label">From</span>
+    <input type="text" placeholder="From" ng-modal="startTime" >
+  </label>
+    </div>
+
+    <div class="col col-50 list">
+        <label class="item item-input item-floating-label">
+    <span class="input-label">To</span>
+    <input type="text" placeholder="To" >
+  </label>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col list">
+        <label class="item item-input item-floating-label">
+    <span class="input-label">Location</span>
+    <input type="text" placeholder="Location" >
+  </label>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col list">
+        <label class="item item-input item-floating-label">
+    <span class="input-label">Created 5d ago by</span>
+    <input type="text" placeholder="Created 5d ago by" >
+  </label>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+</ion-content>
+</ion-view>
+
+
+<style type="text/css">
+
+.bar-dark.bar.bar-header {
+    background: transparent none repeat scroll 0 0 !important;
+    border: medium none !important;
+}
+.bar-dark .button.button-icon {
+    border-color: transparent;
+    color: #8a8a8a;
+}
+.custom-head > a {
+    color: #eb878f !important;
+}
+
+.custom-head > i {
+    color: #eb878f !important;
+}
+
+.button.back-button.buttons.button-clear.header-item {
+    color: #adadad;
+}
+
+</style>

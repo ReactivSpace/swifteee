@@ -1,0 +1,87 @@
+<style type="text/css">
+.button.button-icon.button-clear.ion-funnel {
+    display: none;
+}
+
+</style>
+<ion-view view-title="Setting" class="settingView">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+
+<br>
+
+
+<div class="list">
+  <a class="item item-icon-right" ng-click="notificationshow()"><p>Push Notifications</p><i class="icon ion-chevron-down"></i></a>
+    <div ng-show="notification">
+
+<ul class="list nobackground">
+  <li class="item item-toggle">
+     A&E
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" checked>
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+   <li class="item item-toggle">
+     AUU
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" checked>
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+   <li class="item item-toggle">
+     General Medicine
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" checked>
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+   <li class="item item-toggle">
+     General  Surgery
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" checked>
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+</ul>
+
+
+  </div>
+
+
+  <a class="item  item-icon-right" ng-click="aboutshow()"><p>About</p><i class="icon ion-chevron-down"></i></a>
+  <div ng-show="about">
+  <ul class="list nobackground">
+    <li class="item">Privacy Policy</li>
+    <li class="item">User Agreement</li>
+    <li class="item">End User Agreement</li>
+    <li class="item">Help Center</li>
+ </ul>
+ </div>
+  <button class="button" ng-click="logout()">Sign Out</button>
+</div>
+<ion-list>
+
+
+</ion-list>
+</ion-content>
+</ion-view>
+<style type="text/css">
+.bar-dark.bar.bar-header {
+    background: #3D464D !important;
+    border: medium none !important;
+}
+
+</style>

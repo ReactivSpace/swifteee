@@ -1,0 +1,197 @@
+<ion-view view-title="Edit Profile" class="editprofile"  hide-nav-bar="true">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+<div class="signup-header">
+   <div class="row">
+    <div class="col-10"><a ui-sref="app.profile">X</a></div>
+    <div class="col-75">Edit Profile</div>
+    <div class="col-15"><a ui-sref="app.profile">Done</a></div>
+   </div>
+  </div>
+
+<div>
+<form id="profileForm">
+<div class="editcontent">
+  <div class="row">
+    <div class="col">
+      <p>First Name</p>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" ng-model="user.first_name">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Last Name</p>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" ng-model="user.last_name">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Date of Birth</p>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="date" ng-model="user.dob">
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Secondary Email</p>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="email" ng-model="user.sec_email">
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Registration Number</p>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" ng-model="user.reg_no">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Contact No.</p>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" ng-model="user.contact">
+        </label>
+      </div>
+    </div>
+  </div>
+
+<div class="edithead">
+  <p>Current Employment Details</p>
+</div>
+<div class="row">
+  <div class="col">
+    <p>Name</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="user.current_emp">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>Grade</p>
+  <div class="list list-inset">
+  <label class="item item-input item-select">
+    <div class="input-label">Grade</div>
+    <select ng-model="user.emp_grade">
+      <option>FY1</option>
+      <option selected>SHO</option>
+      <option>Registrar</option>
+      <option>Consultant</option>
+    </select>
+  </label>
+  </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <p>Speciality </p>
+    <div class="list list-inset">
+      <label class="item item-input item-select">
+    <div class="input-label">Speciality</div>
+    <select ng-model="user.emp_speciality">
+      <option>A&E</option>
+      <option>AAU</option>
+      <option selected>General Medicine</option>
+      <option>General Surgery</option>
+      <option>Orthopedics</option>
+      <option>Therapist</option>
+    </select>
+  </label>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-50">
+    <p>From</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="date" value="" ng-model="user.emp_startD">
+      </label>
+    </div>
+  </div>
+  <div class="col col-50">
+    <p>To</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="date" value="Current" ng-model="user.emp_endD">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="edithead">
+  <p>Education</p>
+</div>
+<div class="row">
+  <div class="col">
+    <p>Degree Title</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="user.degree_title">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-50">
+    <p>From</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="date" value="" ng-model="user.degree_start">
+      </label>
+    </div>
+  </div>
+  <div class="col col-50">
+    <p>To</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="date" value="Current" ng-model="user.degree_end">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>Institute</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="user.degree_institute">
+      </label>
+    </div>
+  </div>
+</div>
+
+<button id="updateProfile" class="button button-dark add" ng-click="profileUp(user)">Update Profile</button>
+<!-- <a ui-sref="app.editexperiance" class="button button-dark add">Add Experience</a> -->
+<!-- <a ui-sref="app.images" class="button button-dark add">Images</a> -->
+</form>
+</div>
+</div>
+
+
+
+
+</ion-content>
+</ion-view>

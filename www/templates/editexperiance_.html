@@ -1,0 +1,98 @@
+<ion-view view-title="Edit Experience" class="editprofile"  hide-nav-bar="true">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+<div class="signup-header">
+   <div class="row">
+    <div class="col-10"><a ui-sref="app.profile">X</a></div>
+    <div class="col-75">Add Experience</div>
+    <div class="col-15"><a ui-sref="app.profile">Done</a></div>
+   </div>
+  </div>
+
+<div>
+<div class="edithead edithead_button">
+<p>Previous Experience</p>
+<button class="button button-dark add" ng-click="addExperience(exp)">
+  Add
+</button>
+</div>
+
+<div class="editcontent">
+
+<div class="row">
+  <div class="col">
+    <p>Grade</p>
+    <div class="list list-inset">
+      <label class="item item-input item-select">
+    <div class="input-label">
+      Grade
+    </div>
+    <select ng-model="exp.grade" required="true">
+      <option>FY1</option>
+      <option selected>SHO</option>
+      <option>Registrar</option>
+      <option>Consultant</option>
+    </select>
+  </label>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col">
+    <p>Specialty</p>
+    <div class="list list-inset">
+      <label class="item item-input item-select">
+    <div class="input-label">
+      Specialty
+    </div>
+    <select ng-model="exp.speciality">
+      <option>A&E</option>
+      <option>AAU</option>
+      <option selected>General Medicine</option>
+      <option>General Surgery</option>
+      <option>Orthopedics</option>
+    </select>
+  </label>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-50">
+    <p>From</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="exp.startD">
+      </label>
+    </div>
+  </div>
+  <div class="col col-50">
+    <p>To</p>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="exp.endD">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="row cancelexp padding">
+  <div class="col">
+   <button class="button button-assertive remove">Remove</button>
+  </div>
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</ion-content>
+</ion-view>

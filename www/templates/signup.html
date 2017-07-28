@@ -1,0 +1,59 @@
+<ion-view class="signupView homeView" view-title="Sign Up" hide-nav-bar="true">
+<ion-content overflow-scroll="false" has-bouncing="true">
+  <div class="login-head">
+    <div class="row">
+     <div class="col"><img src="img/logo.png"></div>
+    </div>
+  </div>
+  <div class="row signuptabs">
+
+    <div class="col">
+      <a href="#/app/login">Login</a>
+      <a href="#/app/signup">Sign up</a>
+    </div>
+
+  </div>
+
+<div class="list list-inset">
+
+  <label class="item item-input">
+    <input type="text" placeholder="First Name" ng-model="user.first_name">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Last Name" ng-model="user.last_name">
+  </label>
+  <label class="item item-input">
+    <input type="Email" placeholder="Email Address" ng-model="user.email">
+  </label>
+   <label class="item item-input">
+    <input type="Password" placeholder="Password" ng-model="user.password">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="GMC Number" ng-model="user.reg_no">
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Current Hospital
+    </div>
+    <select ng-model="user.hospital">
+      <option>Hospital 01</option>
+      <option selected>Hospital 02</option>
+      <option>Hospital 03</option>
+    </select>
+  </label>
+  <div class="signup-footer">
+
+  <div class="row">
+      <div class="col"><ion-checkbox >I have read and agree to the <strong>terms of use and privacy policy.</strong></ion-checkbox></div>
+  </div>
+  <div class="row">
+      <div class="col"><p>To continue you must check the box</p></div>
+  </div>
+  </div>
+  <button ng-click="signup(user)" class="button button-positive">Signup</button>
+
+
+</div>
+
+</ion-content>
+</ion-view>

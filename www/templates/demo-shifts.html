@@ -1,0 +1,28 @@
+
+<ion-view view-title="" class="shiftsView">
+<ion-content overflow-scroll="false" has-header="true" has-bouncing="true">
+<!-- ....................... Calender ..................... -->
+<br>
+<div class="row head-button">
+  <div class="col col-50"><button class="button button-stable first">{{today | date : "MMMM y"}}</button></div>
+  <div class="col col-50"><button ui-sref="" class="button button-stable second">List View</button></div>
+<!--   <div class="col col-50"><button class="button button-stable">Calender View</button></div> -->
+</div>
+<p class="padding"><flex-calendar options="options" events="events"></flex-calendar></p>
+
+<!-- ....................... Calender ..................... -->
+<div class="jobs" ng-repeat="shift in (shifts | filter:filterByGrade | filter:filterBySpeciality)">
+  <div class="card">
+    <div class="item item-divider">
+    <strong>{{shift.date}}</strong>
+    </div>
+    <a ng-click="change()" ng-href='#' class="item item-text-wrap">
+    <p><strong> {{shift.speciality}} </strong> - {{shift.grade}} </p>
+    <p class="time">{{shift.startTime}} - {{shift.endTime}}</p>
+    <p class="hour">€{{shift.ratePH}} / hour</p>
+    </a>
+  </div>
+</div>
+
+</ion-content>
+</ion-view>

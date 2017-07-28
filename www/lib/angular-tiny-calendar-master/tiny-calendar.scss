@@ -1,0 +1,92 @@
+$primary: #009688;
+$grey: #ccc;
+$selectedColor: #fff;
+
+.tc-container {
+    width: 100%;
+    max-width: 300px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    .tc-header {
+        line-height: 2em;
+        font-size: 1em;
+        height: 2em;
+        position: relative;
+        .tc-navigation {
+            position: absolute;
+            top: 0;
+            right: 0;
+            button {
+                cursor: pointer;
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                font-size: 0.8em;
+                line-height: 0.8em;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .tc-days-name .tc-day-name {
+        width: (100%/7);
+        display: inline-block;
+        text-align: center;
+        margin: 10px 0 0 0;
+        padding: 5px 0;
+        font-size: small;
+        border-top: 1px solid $grey;
+    }
+    .tc-days {
+        border: 1px solid $grey;
+        border-width: 1px 0;
+        .tc-day {
+            width: (100%/7);
+            display: inline-block;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(red($primary), green($primary), blue($primary), 0.1);
+            }
+            &.differentMonth {
+                color: #aaa;
+            }
+            &.today {
+                color: $primary;
+            }
+            &.hasEvents {
+                font-weight: bold;
+            }
+            &.selected {
+                background-color: $primary;
+                color: $selectedColor;
+                outline: none;
+            }
+        }
+    }
+    .tc-focus {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 100%;
+            li {
+                padding: 5px 0;
+                font-size: small;
+                border-bottom: 1px solid $grey;
+                span{
+                    padding: 8px 10px;
+                    &.tc-time{
+                        display: inline-block;
+                        text-align: right;
+                        border-right: 2px solid $primary;
+                        font-size: smaller;
+                        width: 65px;
+                    }
+                }
+            }
+        }
+    }
+}

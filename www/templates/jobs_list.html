@@ -1,0 +1,246 @@
+<ion-view align-title="center" view-title="My Jobs">
+    <ion-content>
+        <ion-slide-box slide-tabs-scrollable="true" show-pager="false" ion-slide-tabs>
+
+            <ion-slide ion-slide-tab-label="Past Jobs">
+              <div class="row jobsheader">
+              <div class="col"><p>Wednesday, March 10</p></div>
+              </div>
+              <div class="jobs" ng-repeat="shift in shifts_completed">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a class="item item-text-wrap">
+                <p><strong>{{shift.grade}}</strong> <span class="slected-text">{{shift.dept}}</span></p>
+                <p class="time"><span class="icon ion-clock"></span>{{shift.startTime}} - {{shift.endTime}}<span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>€{{shift.ratePH}}ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <!-- <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row jobsheader">
+              <div class="col"><p>Wednesday, March 11</p></div>
+
+              </div>
+
+              <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a  class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a  class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div> -->
+            </ion-slide>
+
+            <ion-slide ion-slide-tab-label="Upcoming">
+              <div class="row jobsheader">
+              <div class="col"><p>Wednesday, March 10</p></div>
+              </div>
+              <div class="jobs" ng-repeat="shift in shifts_approved">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a class="item item-text-wrap">
+                <p><strong>{{shift.grade}}</strong> <span class="slected-text">{{shift.dept}}</span></p>
+                <p class="time"><span class="icon ion-clock"></span>{{shift.startTime}} - {{shift.endTime}}<span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>€{{shift.ratePH}}ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+              <!-- <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a  class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a  class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row jobsheader">
+              <div class="col"><p>Wednesday, March 11</p></div>
+
+              </div>
+
+              <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a  class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div> -->
+            </ion-slide>
+
+            <ion-slide ion-slide-tab-label="Awaiting">
+              <div class="row jobsheader">
+              <div class="col"><p>Wednesday, March 10</p></div>
+              </div>
+
+              <div class="jobs" ng-repeat="shift in shifts_pending">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a class="item item-text-wrap">
+                <p><strong>{{shift.grade}}</strong> <span class="slected-text">{{shift.dept}}</span></p>
+                <p class="time"><span class="icon ion-clock"></span>{{shift.startTime}} - {{shift.endTime}}<span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>€{{shift.ratePH}}ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <!-- <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row jobsheader">
+              <div class="col"><p>Wednesday, March 11</p></div>
+
+              </div>
+
+              <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="jobs">
+              <div class="card">
+                <div class="row">
+                 <div class="col col-80">
+                <a  class="item item-text-wrap">
+                <p><strong>SHO</strong> <span class="slected-text">Accident and  emergency</span></p>
+                <p class="time"><span class="icon ion-clock"></span> 8am - 9pm  <span class="icon ion-clock hosp"> Bedfort hospital</p></a>
+                </div>
+                 <div class="col col-20 leftside">
+                  <p>$45ph</p>
+                 </div>
+                </div>
+              </div>
+              </div> -->
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>
